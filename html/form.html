@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form.html</title>
+</head>
+<body>
+<form action="http://naver.com">
+	<fieldset>
+		<legend>한줄입력</legend>
+		<label for="txt1">TEXT1:</label>
+		<input id="txt1" type="text" size="5" name="t2" value="t2" required>
+	</fieldset>
+	<fieldset>
+		<input type="text" maxlength="5" placeholder="5자리만 입력"/>
+	</fieldset>
+	<fieldset>
+		<input type="password" required placeholder="비밀번호를 입력하세요.">
+	</fieldset>
+	<fieldset>
+		신용카드번호<input maxlength="5" placeholder="" name="t3" required/>
+	</fieldset>
+	<fieldset>
+		<legend>읽기가능</legend>
+		<input type="text" value="읽기전용" readonly/>
+	</fieldset>
+	<fieldset>
+		<input type="checkbox" />ONE&nbsp;&nbsp;
+		<input type="checkbox" />TWO&nbsp;&nbsp;
+		<input type="checkbox" />THREE&nbsp;&nbsp;
+	</fieldset>
+	<fieldset>
+		<input type="radio" name="r" value="1"/>one&nbsp;&nbsp;
+		<input type="radio" name="r" value="2" checked/>two&nbsp;&nbsp;
+		<input type="radio" name="r" value="3"/>three
+	</fieldset>
+	<!-- 서버로 전송하기 위한 목적의input 타입 hidden -->
+	<input type="hidden" name="h" value="hv"/>
+	<fieldset>
+		<input type="file">
+	</fieldset>
+	<fieldset>
+		<select name="s" id="">
+			<option value="">ONE</option>
+			<option value="">TWO</option>
+			<option value="" selected>THREE</option>
+		</select>	
+	</fieldset>
+	
+	<fieldset>
+		<textarea name="ta" id="" cols="40" rows="10">multi line</textarea>
+	</fieldset>
+	<!-- 휴대폰으로 접속했을때만 키패드로만 누를수 있게 키패드만 띄움 -->
+	
+	<fieldset>
+		<legend>HTML5에 추가된 type 속성값</legend>
+		<input type="number" />
+		<input type="email" value="a@b.com"/>
+		<input type="range" min="1" max="10" value="3"/>
+		<input type="date" value="2022-06-21"/>
+		<input type="search" value="검색어"/>
+	</fieldset>
+	<fieldset>
+		<input type="submit" value="전송버튼" />
+		<input type="button" value="일반버튼" />
+		<input type="reset" value="reset버튼" />
+	</fieldset>
+	<fieldset>
+		<button>전송1</button>
+		<button type="button">일반2</button>
+		<button type="reset">리셋버튼2</button>
+	</fieldset>
+</form>
+<button>버튼3</button>
+</body>
+</html>

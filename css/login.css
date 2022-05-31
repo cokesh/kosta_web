@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+#container {
+	background-color:lightgray;
+	width:100%;
+	margin:0 auto;
+	max-width:800px;
+	min-width:600px;
+}
+
+.login {
+	width:100%;
+	padding:10px;
+} 
+
+label {
+	height:100%;
+	text-align:center;
+}
+
+.login > div > input {
+	width:500px;
+	height:30px;
+}
+
+.id_container {
+	padding:5px;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pwd_container {
+	padding: 5px;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+	padding:0 10px 10px 10px;
+}
+
+.find-box>a:nth-child(1) {
+	margin-right:40px;
+}

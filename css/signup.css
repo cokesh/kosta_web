@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+#container {
+	width:500px;
+	margin: 0 auto;
+}
+
+#container > div {
+	margin-bottom: 10px;
+}
