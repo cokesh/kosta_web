@@ -1,8 +1,16 @@
 @charset "UTF-8";
 
+input {
+	margin-bottom:3px;
+	margin-right:2px;
+}
+
 #container {
+	background-color: #F9F3EE;
 	width:500px;
 	margin: 0 auto;
+	padding:5px 0 15px 20px;
+	border-radius: 15px;
 }
 
 #container > div {

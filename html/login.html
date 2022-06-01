@@ -6,33 +6,35 @@
 <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-	<form action="POST">
-		<div id="container">
-				<div class="login">
-					<div class="id_container">
-						<label for="id">아이디&nbsp;&nbsp;&nbsp;&nbsp;</label>
-						<input type="text" id="id" name="id" required placeholder="아이디를 입력하세요."/>		
-					</div>		
-					<div class="pwd_container">
-						<label for="password">비밀번호</label>		
-						<input type="password" id="password" required placeholder="비밀번호를 입력하세요."/>
+	<form action="" method="post">
+		<fieldset style="border:none">
+			<div id="container">
+					<div class="login">
+						<div class="id_container">
+							<label for="id">아이디&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<input type="text" id="id" name="id" required placeholder="아이디를 입력하세요."/>		
+						</div>		
+						<div class="pwd_container">
+							<label for="password">비밀번호</label>		
+							<input type="password" id="password" required placeholder="비밀번호를 입력하세요."/>
+						</div>
+					</div>
+				<div id="footer">
+					<div>
+						<button type="submit">
+							로그인
+						</button>
+					</div>
+					<div class="find-box">
+						<a href="/front/html/searchid.html">아이디 찾기</a>
+						<a href="/front/html/searchpwd.html">비밀번호 찾기</a>
+					</div>
+					<div>
+						<input type="checkbox" checked>아이디저장
 					</div>
 				</div>
-			<div id="footer">
-				<div>
-					<button type="submit">
-						로그인
-					</button>
-				</div>
-				<div class="find-box">
-					<a href="localhost:/front/html/searchid.html">아이디 찾기</a>
-					<a href="localhost:/front/html/searchpwd.html">비밀번호 찾기</a>
-				</div>
-				<div>
-					<input type="checkbox" checked>아이디저장
-				</div>
 			</div>
-		</div>
+		</fieldset>
 	</form>
 </body>
 </html>
