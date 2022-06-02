@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'SUIT-Medium';
+}
+
+header {
+    position: fixed;
+    background-color:#F9F3EE;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    line-height:90px;
+    float: left;
+    overflow: hidden;
+}
+
+header > h1 {
+    /* float: left; */
+    display: none;
+}
+
+#img_starbucks {
+    width: 60px;
+    line-height:70px;
+    margin: 17px 23px;
+}
+
+header > nav {
+    float:right;
+    width: 300px;
+    background-color: #CCF3EE;
+}
+
+header > nav > a {
+    text-decoration: none;
+}
+
+header > nav > a > img {
+    width:27px;
+    text-align: center;
+    margin: 22px 33px;
+}
+
+section {
+    width:100%;
+    height:1000px;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+section > .drink_content {
+    background-color:#F9CEEE;
+    border: 2px solid #FFFF;
+    width: 80%;
+    height: 500px;
+    float: left;
+    position: absolute;
+    min-width: 800px;
+}
+
+section > .none_content {
+    background-color:#F9CEEE;
+    border: 2px solid #FFFF;
+    width: 80%;
+    height: 500px;
+    float: left;
+    position: absolute;
+    min-width: 800px;
+    margin-top: 500px;
+}
+
+section> figure > img {
+    width: 400px;
+}
+
+section > aside {
+    float: right;
+    right: 0;
+    width: 20%;
+    text-align: center;
+    position: relative;
+}
+
+footer {
+    width: 100%;
+    background-color:#97C4B8;
+    color:#FFFF;
+}
+
+footer .c_00b050 {
+    color: #FFFF;
+}
+
+footer .copy_menu {
+    margin-left :-40px;
+}
+
+footer > aside > ul > li,address {
+    list-style: none;
+    display: inline;
+}
