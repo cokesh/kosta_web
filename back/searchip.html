@@ -2,35 +2,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>주소검색페이지입니다.</title>
 <link rel="stylesheet" href="../css/searchip.css" />
 </head>
 <body>
-	<input type="search" name="word">
-	<button>검색</button>
-	
-	<table id="table-address">
-		<thead>
-	        <tr>
-	          <th>우편번호</th><th>주소</th>
-	        </tr>
-     	</thead>
-		<tr>
-			<td>17315</td>
-			<td>경기도 수원시 장안구 정자동</td>
-		</tr>
-		<tr>
-			<td>14382</td>
-			<td>경기도 수원시 장안구 천천동 우방아파트 712동 702호</td>
-		</tr>
-		<tr>
-			<td>15692</td>
-			<td>경기도 수원시 장안구 천천동 베스트타운아파트 737동 802호</td>
-		</tr>
-		<tr>
-			<td>13221</td>
-			<td>경기도 수원시 장안구 천천동 베스트타운아파트 737동 802호</td>
-		</tr>
-	</table>
+	<form action="">
+	<fieldset style="border:none">
+		<div id="container">
+			<div id="search-container">
+				<input type="text" name="word" placeholder="주소를 입력하세요."/>
+				<button>검색</button>
+			</div>
+			<div id="list-container">
+				<table>
+					<tr>
+						<th>우편번호</th>
+						<th>상세주소</th>
+					</tr>
+					<tr>
+						<td>16329</td>
+						<td>경기도 수원시 장안구 만석로 29(천천동, 비단마을현대성우.우방아파트)</td>
+					</tr>
+					<tr>
+						<td>16339</td>
+						<td>경기도 수원시 장안구 정자동 327-2(2층)</td>
+					</tr>
+					<tr>
+						<td>16328</td>
+						<td>경기도 수원시 장안구 천천로74번길 92(정자동, 대월마을대림진흥아파트)</td>
+					</tr>
+					<tr>
+						<td>16452</td>
+						<td>경기도 수원시 팔달구 고등로 15(고등동, 수원역푸르지오자이)</td>
+					</tr>
+					<tr>
+						<td>16330</td>
+						<td>경기도 수원시 장안구 만석로20번길 25(정자동, 청솔마을 SK한화아파트)</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</fieldset>
+	</form>
 </body>
 </html>

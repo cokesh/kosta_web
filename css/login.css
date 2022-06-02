@@ -37,6 +37,11 @@ label {
     align-items: center;
 }
 
+.id_container>label {
+    padding-right: 15px;
+}
+
+
 .pwd_container {
 	padding: 5px;
 	display: flex;
