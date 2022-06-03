@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+
+* {
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+div.productlist>div.table {
+    border: 1px solid;
+    width:80%;
+}
+
+/* 
+div.productlist>div.table div.td {
+    display: inline-block;
+    width: 50%;
+    border: 1px solid;
+    margin: -2px;
+}
+  */
+div.productlist>div.table div.td {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid;
+    /* margin: -2px; */
+}
+
+/* div.productlist > div.table {
+    
+} */
+/* div.productlist>div.table div.td {
+    display: table-cell;    
+} */
+
+div.productlist>div.table div.td>ul {
+    list-style-type: none;
+    margin-left: 0px;
+}
+
+div.productlist>div.table div.td>ul img {
+    width: 80%;
+    max-width: 300px;
+    
+}
+
+@media screen and (min-width: 650px) {
+	div.productlist>div.table div.td {
+        display: inline-block;
+        width: 50%;
+        border: 1px solid;
+        margin: -2px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+	div.productlist>div.table div.td {
+        display: inline-block;
+        width: 33.3%;
+        border: 1px solid;
+        margin: -2px;
+    }
+}
+
+/* 
+div.productlist>table {
+    width: 500px;
+}
+
+div.productlist>table, div.productlist>table td {
+    border: 1px solid;
+}
+
+div.productlist>table td {
+    width: 100px;
+    
+}
+
+div.productlist>table td > ul img {
+    width: 80%;
+    margin: 0 20px;
+}
+
+div.productlist>table tr>td>ul {
+    list-style-type: none;
+    padding-left: 0px;
+} */

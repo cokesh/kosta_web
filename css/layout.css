@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* @import url("basic.css"); */
+
 @font-face {
     font-family: 'SUIT-Medium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
@@ -6,6 +9,7 @@
 }
 
 * {
+    box-sizing: border-box;
     font-family: 'SUIT-Medium';
 }
 
@@ -23,7 +27,6 @@ header {
 }
 
 header > h1 {
-    /* float: left; */
     display: none;
 }
 
@@ -53,7 +56,7 @@ section {
     width:100%;
     height:1000px;
     margin-top: 90px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 section > .drink_content {
@@ -99,8 +102,8 @@ footer .c_00b050 {
     color: #FFFF;
 }
 
-footer .copy_menu {
-    margin-left :-40px;
+footer > aside > ul {
+    padding-left:0;
 }
 
 footer > aside > ul > li,address {
