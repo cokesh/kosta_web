@@ -73,7 +73,7 @@ section > .drink_content {
     background-color:#F9CEEE;
     border-top: 4px solid #ffff;
     border-bottom: 4px solid #FFFF;
-    width: 70%;
+    width: 75%;
     height: 500px;
     float: left;
     position: absolute;
@@ -83,7 +83,7 @@ section > .drink_content {
 section > .none_content {
     background-color:#F9CEEE;
     border-bottom: 4px solid #FFFF;
-    width: 70%;
+    width: 75%;
     height: 500px;
     float: left;
     position: absolute;
@@ -95,34 +95,34 @@ section > article > figure {
     margin: 45px 20px;
 }
 
-/* section > article> figure > img {
-    width: 400px;
-} */
+section>article>figure>img {
+    display: inline-block;
+    width: 45%;
+}
 
-@media screen and (min-width: 650px) {
-	section>article>figure>img {
+@media screen and (max-width: 670px) {
+	section>article>figure>img:nth-child(2) {
         display: inline-block;
-        width: 35%;
-        /* border: 1px solid; */
-        /* margin: -2px; */
+        visibility: hidden;
+
     }
 }
 
-/* @media screen and (min-width: 960px) {
-	div.productlist>div.table div.td {
+
+@media screen and (min-width: 670px) {
+	section>article>figure>img {
         display: inline-block;
-        width: 33.3%;
-        border: 1px solid;
-        margin: -2px;
+        width: 35%;
     }
-} */
+}
 
 section > aside {
     float: right;
+    top: 100px;
     right: 0;
-    width: 30%;
+    width: 25%;
     text-align: center;
-    position: relative;
+    position: fixed;
 }
 
 footer {
