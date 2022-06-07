@@ -20,12 +20,118 @@ window.addEventListener("load", function() {
     //         });
     //     })(i);
 
+    var resultObj = document.querySelector("div.calculator>div.result")
+    var resultNum = 0; //계산될 결과값 
+    var operator; //연산자
     btnArr.forEach(function(item, index) { // 배열쓸때 forEach 쓰는 것이 훨 낫다(0-끝까지 순차처리 할 때 쓰길 권장함!!)
         item.addEventListener('click', function() {
-            console.log(index+1, '클릭!')
+            // console.log(index+1, '클릭!');
+            // var calBtn = index + 1;
+            // resultObj.innerHTML = calBtn + '번 클릭됨'; //바디태그의 html에 접근하여 수정가능
+            // console.log(this.attr('class'));
+            var inner = this.innerHTML;
+            switch(inner) {
+                case '+':
+                    operator = inner;
+                    break;
+                case '=' :
+                    resultObj.innerHTML = resultNum;
+                    operator = undefined;
+                    resultNum = 0;
+                    break;
+                default: //숫자버튼들
+                    resultObj.innerHTML = inner;
+                    if(operator == '+'){
+                        resultNum += parseInt(inner);
+                    }else {
+                        resultNum = parseInt(inner);
+                    }
+            }
         });
     });
     // 계산기 end --------------------------------
+    var cbArr = document.querySelectorAll("div.checkbox input[type=checkbox]");
+    cbArr.forEach(function(item, index) {
+        console.log(item, item.checked);
+    });
+    cbArr[0].addEventListener('click', function() {
+        for ( var i = 0; i < cbArr.length; i++ ) {
+            cbArr[i].checked = this.checked;
+        }
+    })
 
+    var selectObj = document.querySelector("div.select>select");
+    var selectSigunguObj = document.querySelector("div.select>select.sigungu");
+    selectObj.addEventListener('click', function() {
+        console.log(this.value, "클릭되었습니다.");
+    });
+    selectObj.addEventListener('change', function() {
+        console.log(this.value, '변경되었습니다.');
+        
+        switch ( this.value ) {
+            case '서울시':
+                selectSigunguObj.innerHTMl = '';
+                var seoul = '<option>구를 선택하세요</option>';
+                seoul += '<option>중구</option>';
+                seoul += '<option>강북구</option>';
+                seoul += '<option>강동구</option>';
+                seoul += '<option>강남구</option>';
+                seoul += '<option>강서구</option>';
+                selectSigunguObj.innerHTML = seoul;
+                selectSigunguObj.style.display = 'inline-block';
+                break;
+            case '제주시':
+                selectSigunguObj.innerHTML = '';
+                var jeju = '<option>시를 선택하세요</option>';
+                jeju += '<option>제주시</option>';
+                jeju += '<option>서귀포시</option>';
+                selectSigunguObj.innerHTML = jeju;
+                selectSigunguObj.style.display = 'inline-block';
+                break;
+            default:
+                selectSigunguObj.innerHTML = '';
+                selectSigunguObj.style.display = 'inline-none';
+
+        }
+    });
+
+
+    var inputObj = document.querySelector("div.keyboard>input[type=text]");
+    inputObj.addEventListener('click', function() {
+        console.log('input객체가 클릭됨');
+    })
+    inputObj.addEventListener('focus', function() {
+        console.log('input객체 포커스받았음');
+    })
+    inputObj.addEventListener('keyup', function(event) {
+        alert('입력된 키값:'+ event.key);
+    })
+
+    var btSubmitObj = this.document.querySelector('div.submit>form>button');
+    var formObj = this.document.querySelector('div.submit>form');
+    var textSubmitObj = this.document.querySelector('div.submit>form>input[name=t]');
+
+    btSubmitObj.addEventListener('click', function() {
+        alert('전송버튼 클릭이 되었습니다.');
+    });
+    formObj.addEventListener('submit', function(event) {//전송되기전에 할일을 작성함.
+        alert('폼의 서브밋이벤트가 발생함.');
+        if(textSubmitObj.value == '') {
+            alert('값을 입력하세요.');
+            event.preventDefault();
+
+        }
+    });
+    var dicAobj = this.document.querySelector("div.a");
+    dicAobj.addEventListener('click' ,function() {
+        this.style.backgroundColor = 'navy';
+    });
+    // 이벤트 전파: 하위객체에서 발생한 이벤트가 상위객체로 전파 = > 이벤트 버블링방식
+    var aObj = document.querySelector('div.a>a');
+    aObj.addEventListener('click', function(event) {
+        this.style.backgroundColor = 'teal';
+        event.preventDefault();
+        event.stopPropagation();
+    });
 });
 

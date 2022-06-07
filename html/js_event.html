@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/calculator.css">
     <title>Document</title>
+    <style>
+        div.select>select.sigungu {
+            display:none;
+        }
+        
+        div.keyboard>input[type=text]:focus{
+            background-color:antiquewhite;
+        }
+    </style>
     
 </head>
 <script src="../js/event.js"></script>
@@ -32,6 +41,43 @@
         <button class="plus">+</button>
         <button class="equal">=</button>
         <br>
+    </div>
+    <div class="checkbox">
+        <fieldset>
+            <legend><input type="checkbox">ALL</legend>
+            <input type="checkbox"><span>ONE</span>
+            <input type="checkbox" checked="checked"><span>TWO</span>
+            <input type="checkbox"><span>THREE</span>
+        </fieldset>
+    </div>
+
+    <div class="select">
+        <select class="sido">
+            <option selected>시도를 선택하세요</option>
+            <option>서울시</option>
+            <option>제주시</option>
+        </select>
+
+        <select class="sigungu">
+            <option selected>구를 선택하세요</option>
+            <option>송파구</option>
+            <option>중구</option>
+            <option>강서구</option>
+        </select>
+    </div>
+    <div class="keyboard">
+        <input type="text">
+    </div>
+    
+    <div class="submit">
+        <form method="get" action="https://github.com/cokesh">
+            <input type="text" name="t" value="test"><br>
+            <button>전송</button>
+        </form>
+    </div>
+    
+    <div class="a" style="border:1px solid; padding: 10px; margin: 30px;">
+        <a href="http://www.naver.com">naver.com</a>
     </div>
 
 </body>
