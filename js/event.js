@@ -109,11 +109,18 @@ window.addEventListener("load", function() {
 
     var btSubmitObj = this.document.querySelector('div.submit>form>button');
     var formObj = this.document.querySelector('div.submit>form');
-    var textSubmitObj = this.document.querySelector('div.submit>form>input[name=t]');
+    // var textSubmitObj = this.document.querySelector('div.submit>form>input[name=t]');
+
+    //DOM
+    var btSubmitObj = formObj.lastElementChild; 
+    //element를 써주지 않으면 enter 값도 텍스트노드로 받아들이기 때문에 차지 못함.
+    var textSubmitObj = formObj.firstElementChild; 
+    console.log(btSubmitObj);
 
     btSubmitObj.addEventListener('click', function() {
         alert('전송버튼 클릭이 되었습니다.');
     });
+    
     formObj.addEventListener('submit', function(event) {//전송되기전에 할일을 작성함.
         alert('폼의 서브밋이벤트가 발생함.');
         if(textSubmitObj.value == '') {
@@ -122,6 +129,7 @@ window.addEventListener("load", function() {
 
         }
     });
+
     var dicAobj = this.document.querySelector("div.a");
     dicAobj.addEventListener('click' ,function() {
         this.style.backgroundColor = 'navy';
@@ -133,5 +141,23 @@ window.addEventListener("load", function() {
         event.preventDefault();
         event.stopPropagation();
     });
+
+    //getElementsByTagName보다 더 많은 태그를 찾는데에 있어 더 적합함.
+    //getElementsByTagName은 배열형태가 아님
+    var inputNodeList = this.document.querySelectorAll("input");
+    console.log("----------------");
+    console.log(inputNodeList);
+    console.log("----------------");
+    
+    var inputCollection = this.document.getElementsByTagName("input");
+    
+    console.log(inputCollection);
+    console.log("----------------");
+    console.log(inputCollection);
+    console.log("----------------");
+
+    // inputCollection.forEach(function(item, index){
+    //     console.log('inputCollection', item);
+    // });
 });
 
