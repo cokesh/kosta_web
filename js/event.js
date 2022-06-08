@@ -80,18 +80,34 @@ window.addEventListener("load", function() {
                 selectSigunguObj.innerHTML = seoul;
                 selectSigunguObj.style.display = 'inline-block';
                 break;
-            case '제주시':
+            case '제주도':
+                // for ( var i = 0; i < selectSigunguObj.childNodes.length; i++ ) {
+                //     console.log('before length', selectSigunguObj.childNodes.length);
+                //     selectSigunguObj.removeChild( selectSigunguObj.childNodes[i]);
+                //     console.log('after length', selectSigunguObj.childNodes.length);
+                // }
+
+                while (selectSigunguObj.hasChildNodes()) {
+                    selectSigunguObj.removeChild(selectSigunguObj.firstChild);
+                }
+
+                // var jeju = '<option>시를 선택하세요</option>';
+                // jeju += '<option>제주시</option>';
+                // jeju += '<option>서귀포시</option>';
+                // selectSigunguObj.innerHTML = jeju;
                 selectSigunguObj.innerHTML = '';
-                var jeju = '<option>시를 선택하세요</option>';
-                jeju += '<option>제주시</option>';
-                jeju += '<option>서귀포시</option>';
-                selectSigunguObj.innerHTML = jeju;
+                var jeju = ['시를 선택하세요.', '제주시', '서귀포시'];
+                for ( var i = 0; i < jeju.length; i++ ) {
+                    var opt = document.createElement('option');
+                    var txt = document.createTextNode(jeju[i]);
+                    opt.appendChild(txt);
+                    selectSigunguObj.appendChild(opt);
+                }
                 selectSigunguObj.style.display = 'inline-block';
                 break;
             default:
                 selectSigunguObj.innerHTML = '';
                 selectSigunguObj.style.display = 'inline-none';
-
         }
     });
 
@@ -150,8 +166,6 @@ window.addEventListener("load", function() {
     console.log("----------------");
     
     var inputCollection = this.document.getElementsByTagName("input");
-    
-    console.log(inputCollection);
     console.log("----------------");
     console.log(inputCollection);
     console.log("----------------");
