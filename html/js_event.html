@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/calculator.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../jq/event.js"></script>
     <title>Document</title>
     <style>
         div.select>select.sigungu {
@@ -17,12 +19,9 @@
     </style>
     
 </head>
-<script src="../js/event.js"></script>
 <body>
     <input type="text">
-    <button onclick="btn('오점뭐')">클릭</button>
-    <!-- 인라인 스크립트 -->
-    <!-- <button onclick="alert('오점뭐?')">클릭</button> -->
+    <button>클릭</button>
     <div class="calculator">
         <div class="result">결과영역</div>
         <button>1</button>
@@ -46,7 +45,7 @@
         <fieldset>
             <legend><input type="checkbox">ALL</legend>
             <input type="checkbox"><span>ONE</span>
-            <input type="checkbox" checked="checked"><span>TWO</span>
+            <input type="checkbox"><span>TWO</span>
             <input type="checkbox"><span>THREE</span>
         </fieldset>
     </div>
@@ -55,7 +54,6 @@
         <select class="sido">
             <option selected>시도를 선택하세요</option>
             <option>서울시</option>
-            <option>제주시</option>
             <option>제주도</option>
         </select>
 

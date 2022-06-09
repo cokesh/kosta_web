@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/window.css">
     <script src="../js/window.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button.openQR").click(function () {
+                $("div.qr").toggle();
+            });
+        });
+    </script>
     <!-- 스크립트 태그가헤드안에있어서 dom트리가 완성이 아직 덜된 상태임 -->
     <title>Document</title>
 </head>
