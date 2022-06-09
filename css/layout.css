@@ -108,7 +108,6 @@ section>article>figure>img {
     }
 }
 
-
 @media screen and (min-width: 670px) {
 	section>article>figure>img {
         display: inline-block;

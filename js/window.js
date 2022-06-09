@@ -16,19 +16,20 @@ function displayTime(element) {
     element.innerHTML = now;
 }
 // 큐알 이미지 띄우기
-var aObj = this.document.querySelector('div.qr');
-function openQR() {
+function openQR(el) {
     var qr = '<img src="../img/스크린샷 2022-06-08 오후 2.14.55.png" alt="" style="width:500px;">';
-    aObj.innerHTML = qr;
+    el.innerHTML = qr;
 }
 
 window.addEventListener('load', function() {
-
+    var test;
+    
     // qr 이미지 띄우기 start------------------------
+    var aObj = this.document.querySelector('div.qr');
     var btqr = this.document.querySelector('button.openQR');
 
     btqr.addEventListener('click', function() {
-        window.setInterval(openQR, 3000, btqr);
+        test = window.setInterval(openQR, 100, aObj);
     })
     // qr 이미지 띄우기 end------------------------
 
