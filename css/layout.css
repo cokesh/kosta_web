@@ -52,7 +52,7 @@ header > nav {
 header > nav > a {
     display: block;
     text-decoration: none;
-    width: 33%;
+    width: 20%;
     float: left;
     text-align: center;
 }

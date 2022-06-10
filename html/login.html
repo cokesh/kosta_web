@@ -4,10 +4,11 @@
 	<meta charset="UTF-8">
 	<title>로그인 페이지입니다.</title>
 	<link rel="stylesheet" href="../css/login.css">
-	<script src="../js/login.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="../jq/login.js"></script>
 </head>
 <body>
-	<form action="" method="">
+	<form action="http://localhost:8888/back/login.html" method="post">
 		<fieldset style="border:none">
 			<div id="container">
 					<div class="login">
@@ -17,7 +18,7 @@
 						</div>		
 						<div class="pwd_container">
 							<label for="password">비밀번호</label>		
-							<input type="password" id="password" required placeholder="비밀번호를 입력하세요."/>
+							<input type="password" id="pwd" name="pwd" required placeholder="비밀번호를 입력하세요."/>
 						</div>
 					</div>
 				<div id="footer">
