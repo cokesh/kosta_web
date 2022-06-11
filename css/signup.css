@@ -17,6 +17,6 @@ input {
 	margin-bottom: 10px;
 }
 
-/* #container>button[type=submit] {
-	display: none;
-} */
+#container>button[type=submit] {
+	visibility: hidden;
+}

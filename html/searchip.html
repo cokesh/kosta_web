@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <title>주소검색페이지입니다.</title>
 <link rel="stylesheet" href="../css/searchip.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../jq/searchip.js"></script>
 </head>
 <body>
-	<form action="">
+	<form action="" method="post">
 	<fieldset style="border:none">
 		<div id="container">
 			<div id="search-container">
@@ -20,23 +22,23 @@
 						<th>상세주소</th>
 					</tr>
 					<tr>
-						<td>16329</td>
+						<td class="ip" id="ip1">16329</td>
 						<td>경기도 수원시 장안구 만석로 29(천천동, 비단마을현대성우.우방아파트)</td>
 					</tr>
 					<tr>
-						<td>16339</td>
+						<td class="ip" id="ip2">16339</td>
 						<td>경기도 수원시 장안구 정자동 327-2(2층)</td>
 					</tr>
 					<tr>
-						<td>16328</td>
+						<td class="ip" id="ip3">16328</td>
 						<td>경기도 수원시 장안구 천천로74번길 92(정자동, 대월마을대림진흥아파트)</td>
 					</tr>
 					<tr>
-						<td>16452</td>
+						<td class="ip" ip="ip4">16452</td>
 						<td>경기도 수원시 팔달구 고등로 15(고등동, 수원역푸르지오자이)</td>
 					</tr>
 					<tr>
-						<td>16330</td>
+						<td class="ip" id="ip5">16330</td>
 						<td>경기도 수원시 장안구 만석로20번길 25(정자동, 청솔마을 SK한화아파트)</td>
 					</tr>
 				</table>
