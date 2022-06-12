@@ -18,25 +18,11 @@ $(function() {
     // 먼저 우편번호 찾기 버튼 객체를 찾는다.
     let $btSearchIp = $('button.searchIp');
     $btSearchIp.click(function(){
-        window.open('/front/html/searchip.html');
-        // location.href = '/front/html/searchip.html';
+        let left = Math.ceil(( window.screen.width/2 ) - 700/2);
+        let top = Math.ceil(( window.screen.height/2 ) - 300/2);
+        window.open('/front/html/searchip.html', '_blank', 'status=no, height=300, width=700, left='+ left + ', top='+ top);
     });
     // 우편번호 찾기 END---------
-
-    // $.ajax({
-    //     url: '',
-    //     method: 'get',
-    //     data: data,
-    //     success: function(responseText) {
-    //         // let jsonObj = JSON.parse(responseText);
-    //         alert(responseText);
-    //     },
-    //     error: function(jqXHR) {
-    //         alert('에러코드: ' + jqXHR.status);
-    //     }
-    // });
-
-
 
     //가입버튼 클릭이벤트 발생 -> 폼서브밋 이벤트 발생 -> 기본처리(전송)
     // 폼객체 찾아라
@@ -56,19 +42,22 @@ $(function() {
         // 비밀번호는 위에서 찾음
         let nameValue = $('input[name=name]').val();
         let addrValue = $('input[name=addr]').val();
+        let addrDtValue = $('input[name=detailAddr]').val();
         let buildingnoValue = $('input[name=buildingno]').val();
 
         let url = 'http://localhost:8888/back/jsp/signup.jsp';
         //객체로 만드는 방법---------
-        // let data = {id: idValue, 
-        //             pwd: $pwd.val(), 
-        //             name: nameValue, 
-        //             addr:addrValue, 
-        //             buildingno: buildingnoValue
-        //             }; // 실제로 현업에서는 훨씬 더 정보가 많음.
+        let data = {id: idValue, 
+                    pwd: $pwd.val(), 
+                    name: nameValue, 
+                    addr:addrValue, 
+                    dtAddr:addrDtValue, 
+                    buildingno: buildingnoValue
+                    }; // 실제로 현업에서는 훨씬 더 정보가 많음.
 
         //
-        let data = $(this).serialize();
+        // let data = $(this).serialize();
+        // let sedata = data = data.serialize();
         alert(data);
         $.ajax({
             url: url,

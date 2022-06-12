@@ -32,5 +32,6 @@ table, th, td{
 
 td.ip:hover {
 	color: red;
+	font-weight: bold;
 	cursor: pointer;
 }

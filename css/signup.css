@@ -17,6 +17,10 @@ input {
 	margin-bottom: 10px;
 }
 
-#container>button[type=submit] {
+/* #container>button[type=submit] {
 	visibility: hidden;
+} */
+
+.address-container>input.addr {
+	width: 400px;
 }
