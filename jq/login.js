@@ -7,7 +7,7 @@ $(function(){
     let $form = $('form');
 
     $form.submit(function() {
-        let  url = 'http://localhost:8888/back/jsp/login.jsp';
+        let  url = 'http://localhost:8888/back/login';
         // 사용자가 입력해준 아이디값 비밀번호값
         let inputIdValue, inputPwdValue;
         inputIdValue =$inputId.val();
@@ -35,8 +35,9 @@ $(function(){
             url: url,
             method: 'post',
             data: data,
-            success: function(responseText) {
-                let jsonObj = JSON.parse(responseText);
+            success: function(jsonObj) {
+            // success: function(responseText) {
+            //     let jsonObj = JSON.parse(responseText);
                 if(jsonObj.status == 1) {
                     // 로그인 성공
                     // 메인 화면으로 돌아가기

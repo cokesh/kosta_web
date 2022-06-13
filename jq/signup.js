@@ -38,33 +38,34 @@ $(function() {
             $pwd.focus();
             return false; // submit 함수 빠져나감
         }
-        let idValue = $('input[name=id]').val();
-        // 비밀번호는 위에서 찾음
-        let nameValue = $('input[name=name]').val();
-        let addrValue = $('input[name=addr]').val();
-        let addrDtValue = $('input[name=detailAddr]').val();
-        let buildingnoValue = $('input[name=buildingno]').val();
+        // let idValue = $('input[name=id]').val();
+        // // 비밀번호는 위에서 찾음
+        // let nameValue = $('input[name=name]').val();
+        // let addrValue = $('input[name=addr]').val();
+        // let addrDtValue = $('input[name=detailAddr]').val();
+        // let buildingnoValue = $('input[name=buildingno]').val();
 
-        let url = 'http://localhost:8888/back/jsp/signup.jsp';
+        let url = 'http://localhost:8888/back/signup'; // 서블릿의 url로 지정
         //객체로 만드는 방법---------
-        let data = {id: idValue, 
-                    pwd: $pwd.val(), 
-                    name: nameValue, 
-                    addr:addrValue, 
-                    dtAddr:addrDtValue, 
-                    buildingno: buildingnoValue
-                    }; // 실제로 현업에서는 훨씬 더 정보가 많음.
+        // let data = {id: idValue, 
+        //             pwd: $pwd.val(), 
+        //             name: nameValue, 
+        //             addr:addrValue, 
+        //             dtAddr:addrDtValue, 
+        //             buildingno: buildingnoValue
+        //             }; // 실제로 현업에서는 훨씬 더 정보가 많음.
 
         //
-        // let data = $(this).serialize();
+        let data = $(this).serialize();
         // let sedata = data = data.serialize();
-        alert(data);
+        // alert(data);
         $.ajax({
             url: url,
             method: 'post',
             data: data,
-            success: function(responseText) {
-                let jsonObj = JSON.parse(responseText);
+            success: function(jsonObj) {
+            // success: function(responseText) {
+            //     let jsonObj = JSON.parse(responseText);
                 alert(jsonObj.msg);
             },
             error: function(jqXHR) {

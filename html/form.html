@@ -5,7 +5,7 @@
 <title>form.html</title>
 </head>
 <body>
-<form action="http://naver.com">
+<form action="http://localhost:8888/back/request">
 	<fieldset>
 		<legend>한줄입력</legend>
 		<label for="txt1">TEXT1:</label>
@@ -25,9 +25,9 @@
 		<input type="text" value="읽기전용" readonly/>
 	</fieldset>
 	<fieldset>
-		<input type="checkbox" />ONE&nbsp;&nbsp;
-		<input type="checkbox" />TWO&nbsp;&nbsp;
-		<input type="checkbox" />THREE&nbsp;&nbsp;
+		<input type="checkbox" name="c" value="1" />ONE&nbsp;&nbsp;
+		<input type="checkbox" name="c" value="2" />TWO&nbsp;&nbsp;
+		<input type="checkbox" name="c" value="3"/>THREE&nbsp;&nbsp;
 	</fieldset>
 	<fieldset>
 		<input type="radio" name="r" value="1"/>one&nbsp;&nbsp;
