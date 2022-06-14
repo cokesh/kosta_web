@@ -28,7 +28,7 @@ header {
     height: 90px;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 9999;
     line-height:90px;
     float: left;
     overflow: hidden;

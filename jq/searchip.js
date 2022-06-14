@@ -7,6 +7,8 @@ $(function(){
         let $selectDtIp = $select.next().html();
         ip = $selectIp;
 
+        // 주소입력창을 팝업으로 띄운 후에 click한 ip 값을 부모의 페이지에 전달함
+        // 클릭하면 팝업창을 닫아줌
         $("#addr", parent.opener.document).attr('value', ip);
         $("input[name=detailAddr]", parent.opener.document).attr('value', $selectDtIp);
         window.self.close();
