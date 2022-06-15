@@ -2,6 +2,30 @@ $(function() {
     let $btSubmit = $('button[type=submit]');
     //--아이디중복확인버튼 클릭 START--
     let $btIdupchk = $('button.iddupchk');
+
+    //--아이디중복확인버튼 클릭 START--
+    let $btIdupchk = $('input[value="아이디중복확인"]');
+    $btIdupchk.click(function(){
+        $.ajax({
+            url: 'http://localhost:8888/back/iddupchk',
+            method : 'get',
+            data : {id: $inputId.val()},
+            success: function(jsonObj){
+                if(jsonObj.status == 1){ //사용가능한 아이디인경우
+                    $btSubmit.show(); 
+                }else{
+                    alert(jsonObj.msg);
+                }
+                
+            },
+            error: function(jqXHR){
+                alert('오류:' + jqXHR.status);
+            }
+        })
+        //submit과 달리 button은 기본이벤트를 처리하지 않기에 return false를 작성해주지 않아도 됨 
+        
+    })
+
     $btIdupchk.click(function(){
         $btSubmit.show();
     });

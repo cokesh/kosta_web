@@ -51,7 +51,7 @@ $(function(){
             error: function(jqXHR, status, errorThrown) {
                 alert(jqXHR.status + ': ' + jqXHR.statusText); // error alert 하기
             }
-        })
+        });
         return false;
     });
     // $(document).ready(function(){
@@ -61,5 +61,5 @@ $(function(){
     // // 로그인 버튼 객체 찾기
     // let $loginBtn = $('button[type=submit]');
     
-    // })
-})
+    // });
+});
