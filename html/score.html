@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>별점주기</title>
+</head>
+<body>
+    <div>
+        <img src="../img/haulbinchen.jpeg" width="200px">
+    </div>
+    <form action="/back/jsp/score.jsp">
+        <input type="radio" name="score" value="1">⭐️☆☆☆☆<br>
+        <input type="radio" name="score" value="2">⭐️⭐️☆☆☆<br>
+        <input type="radio" name="score" value="3" checked="checked">⭐️⭐️⭐️☆☆<br>
+        <input type="radio" name="score" value="4">⭐️⭐️⭐️⭐️☆<br>
+        <input type="radio" name="score" value="5">⭐️⭐️⭐️⭐️⭐️<br>
+        <button>별점주기</button>
+
+    </form>
+    <div class="result">
+        영화평점결과
+    </div>
+</body>
+</html>
