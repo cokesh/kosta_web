@@ -34,7 +34,11 @@ $(function(){
         console.log(arr);
         let prod_no = arr[arr.length-1].split('.')[0];
         console.log(prod_no);
-        location.href = "http://localhost:8888/back/viewproduct?prod_no=" + prod_no;
+
+        // location.href = "http://localhost:8888/back/viewproduct?prod_no=" + prod_no;
+        // 백을 직접 요청하는게 아니라 프론트가 갖고있는 같은경로에 있는 html을 요청함
+        location.href = "/front/html/viewproduct.html?prod_no=" + prod_no;
+
         //
-    })
+    });
 });

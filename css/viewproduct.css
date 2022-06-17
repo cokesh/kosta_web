@@ -1,0 +1,32 @@
+@charset "UTF-8";
+div.viewproduct{
+	width:100%;
+	border:1px solid;
+	text-align:center;
+}
+div.viewproduct>div.detail{
+	display: inline-block;
+	width: 50%;
+}
+div.viewproduct>div.detail>ul{
+	list-style-type: none;
+	padding-left: 0px;
+}
+div.viewproduct>div.detail>ul>li{
+	margin-top: 20px;
+}
+h1{
+	display:inline-block;
+}
+#img_starbucks {
+	float:left;
+	display:inkline-block;
+	width:50px;
+}
+nav{
+	float:right;
+}
+nav>a>img{
+	
+	width:30px;
+}
