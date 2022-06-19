@@ -28,7 +28,6 @@ $(function() {
             let $navObj = $('header>nav');
             let $navObjHtml = '';
             if(jsonObj.status == 1){ // 로그인성공한 경우
-                
                 $navObjHtml += '<a href ="/back/logout"><img src="../img/logout.png"></a>';
             } else { // 로그인 실패한 경우
                 $navObjHtml += '<a href="login.html"><img src="../img/enter.png"></a>';
