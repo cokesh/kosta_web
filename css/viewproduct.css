@@ -1,12 +1,16 @@
 @charset "UTF-8";
 div.viewproduct{
+	display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
 	width:100%;
 	border:1px solid;
-	text-align:center;
+	/* text-align:center; */
 }
 div.viewproduct>div.detail{
 	display: inline-block;
-	width: 50%;
+	width: 40%;
 }
 div.viewproduct>div.detail>ul{
 	list-style-type: none;

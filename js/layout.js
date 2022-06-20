@@ -8,7 +8,6 @@ $(function() {
     <a href="signup.html"><img src="../img/icon_spot_m.png" alt=""></a>
     <a href="productlist.html"><img src="../img/btn_berger_m.png" alt=""></a>
     */
-
     // 그외                 -- 로그인 안된 상태
     // header > nav > a > img의 src 를 enter.png 
     
@@ -18,9 +17,11 @@ $(function() {
     <a href="productlist.html"><img src="../img/btn_berger_m.png" alt=""></a>
     <a href="viewcart.html"><img src="../img/basket.png" alt=""></a>
     */
-
+    // -----------------------------------------------------------
+    // back 의 loginStatus 서블릿페이지로 전송
+    // 클라이언트에서 서버로 정보를 요청하기 위해 get 메서드방식
     let url = '/back/loginstatus';
-    let method = 'get';
+    let method = 'get'; 
     $.ajax({
         url: url,
         method: method, 
@@ -41,7 +42,6 @@ $(function() {
             alert('error : ' + jqXHR.status);
         }
     })
-
 
     // 메뉴 객체들 찾기
     // jquery 객체라고 알려주는 $표시임

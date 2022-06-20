@@ -31,4 +31,33 @@ $(function(){
         }
         
     });
+
+    $('article.drink_content>div.viewproduct>div.detail>ul>li>button').click(function() {
+        let prod_no = $('div.detail>ul>li>span.prod_no').html();
+        let quantity = $('div.detail>ul>li>input[type=number]').val();
+        // 자바스크립트 객체의 형태로 보내면 됨
+        // 객체의 속성명에 ""를 붙여도 되고 안붙여도 됨
+        // json객체로 보낼시에만 ""붙이면됨
+
+        $.ajax({
+            url: '/back/addcart', 
+            method: 'get',
+            data: {prod_no: prod_no, quantity: quantity}, 
+            success: function(){
+                $('article.drink_content>div.viewproduct>div.result').show();
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                alert('Error : '+jqXHR.status);
+            }
+        });
+        return false;
+    });
+
+    $('div.result>button.productlist').click(function(){
+        $('header>nav>a[href="productlist.html"]>img').trigger('click');
+    });
+
+    $('button.viewcart').click(function(){
+        $('header>nav>a[href="viewcart.html"]>img').trigger('click');
+    });
 });
